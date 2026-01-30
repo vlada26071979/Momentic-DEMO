@@ -1,0 +1,41 @@
+fileType: momentic/test
+id: a26bedfa-591e-470a-9d42-a5282035aeac
+name: first-test
+baseUrl: https://www.saucedemo.com/
+description: opening web app
+schemaVersion: 1.0.22
+advanced:
+  viewport:
+    width: 1920
+    height: 1080
+  browserType: Chromium
+retries: 1
+steps:
+  - id: 900442d8-e2e0-42dc-a443-5fedff9750bc
+    type: PRESET_ACTION
+    command:
+      id: f24c6035-093b-4ef0-8370-1508d28fdfb4
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: Username field
+      value: standard_user
+  - id: 48c13a33-88f6-48f8-8ebc-ceeac0af6f80
+    type: PRESET_ACTION
+    command:
+      id: a3d51fbe-4845-45fa-9f47-38dc6930d85d
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: password field
+      value: secret_sauce
+  - id: 81d11cd3-875c-4e4a-bfaf-e0af6291015e
+    type: PRESET_ACTION
+    command:
+      id: ab0e6f70-d05b-458e-9de0-f82b87c32c84
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: login button on the main form

@@ -1,0 +1,80 @@
+fileType: momentic/test
+id: 324eac80-6481-4820-9b98-b36c93a0cc51
+name: recording-test
+baseUrl: https://www.saucedemo.com/
+description: test
+schemaVersion: 1.0.22
+advanced:
+  viewport:
+    width: 1920
+    height: 1080
+  browserType: Chromium
+retries: 1
+steps:
+  - id: ab5d7678-e44d-4792-9624-5a77c557fd22
+    type: PRESET_ACTION
+    command:
+      id: 8637d27b-2a91-4d0f-b4cf-51640a1f1850
+      clearContent: false
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: the username text input (username field)
+      value: standard
+  - id: 0b22502d-366b-48b8-8b34-f84c5a7b14ab
+    type: PRESET_ACTION
+    command:
+      id: 662b0b81-db59-429f-bc08-1a23a9f1469e
+      clearContent: false
+      type: TYPE
+      value: _user
+  - id: dc736716-2e67-42a2-b245-68bdab0b061e
+    type: PRESET_ACTION
+    command:
+      id: 3cb995b1-65fd-46d3-99db-c4cc07a58eeb
+      clearContent: false
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: the password textbox in the login form
+      value: secret
+  - id: ec813a9b-2748-4ff8-96ab-70bf0ae8cf52
+    type: PRESET_ACTION
+    command:
+      id: 4fd4ff1f-b2bb-4850-b0ee-5a21f8663b3d
+      clearContent: false
+      type: TYPE
+      value: _sauce
+  - id: a012a55f-ee21-412b-98a6-f88a02311c7a
+    type: PRESET_ACTION
+    command:
+      id: aa6e7862-53b1-4321-9b4e-66beb0ea714b
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: the login submit button in the login form (id "login-button")
+  - id: f6b36406-be76-4dbd-b78a-bd02b9d8bf5b
+    type: PRESET_ACTION
+    command:
+      id: b4cde622-ec55-4de3-93ee-f852343755d7
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: the hamburger menu button in the top-left header (open menu)
+  - id: bb20210a-25cf-4564-ae68-465fd9cee579
+    type: PRESET_ACTION
+    command:
+      id: 1a63fd94-7410-45c1-bddb-67b4b51b165a
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: the Logout link in the left sidebar menu
+  - id: 478f8c4f-d3cd-4bd9-8199-56cfb5d63bfa
+    type: PRESET_ACTION
+    command:
+      id: ba0f89fa-5a5f-4dd0-9f47-c565bd48b65e
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: the login button in the center login form (input with
+          data-test "login-button")

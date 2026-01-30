@@ -1,0 +1,117 @@
+fileType: momentic/test
+id: ddfdebee-5d03-4f2b-a990-d0b591429ce1
+name: scopiologin
+baseUrl: https://ssmp.scopicsoftware.dev/
+description: logging in to Scopio
+schemaVersion: 1.0.22
+advanced:
+  viewport:
+    width: 1920
+    height: 1080
+  browserType: Chromium
+retries: 1
+steps:
+  - id: 230080f2-b5ec-4dbb-870c-f528d60e2282
+    type: PRESET_ACTION
+    command:
+      id: 7418d49c-7a75-4da9-a5c2-ec15dd2b63b7
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: email field
+      value: ssmp-admin@scopicsoftware.com
+  - id: 6452d4f8-0649-4e2c-be44-0d3f2cbb6db2
+    type: PRESET_ACTION
+    command:
+      id: f886752a-78b0-4706-82e7-449484c3c5a0
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: password field
+      value: W84pBaU8KKeNLP1m
+  - id: 8d39ae11-9f24-494d-9e58-b1db68d32d09
+    type: PRESET_ACTION
+    command:
+      id: 16dfbece-822b-4b38-8da4-2975a6cee400
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: sign in button on the main form
+  - id: 4ef81e21-9f4e-4cce-8bb8-223fcf298e0f
+    type: PRESET_ACTION
+    command:
+      id: cb52759d-bb7a-4586-9410-e79f9174cb56
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: Projects link in the left side bar
+  - id: 1c3593d4-3841-4522-a48e-be66a4962b92
+    type: PRESET_ACTION
+    command:
+      id: b7e7485c-730f-4108-b136-cbfb4d9f830b
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: New project button in top right corner
+  - id: 4d2e3d32-87dd-4267-9f9c-fa543e267634
+    type: PRESET_ACTION
+    command:
+      id: 944795c7-52f6-4dd6-af25-a7aa4701a18e
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: project name field in a dialog box
+      value: Vlada's project 1
+  - id: efe48915-2f9c-4168-b3a6-a4e902896ece
+    type: PRESET_ACTION
+    command:
+      id: a8495c5f-8ee5-4704-821d-c90ec371c489
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: description field in the dialog box
+      value: my first scopic project
+  - id: c8415349-34ea-45c5-893b-bcd0b623aeb9
+    type: PRESET_ACTION
+    command:
+      id: 3c485118-242d-4674-90f9-07ef374ddc29
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: select organization button
+  - id: 9e5147d0-0670-4ed2-b8bd-22c302ba356f
+    type: PRESET_ACTION
+    command:
+      id: d1974c82-385a-41f9-b9cf-8229a129ef7f
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: text that contains Scopic Inc
+  - id: a8de31a7-4a4d-4911-a4f2-1305f8170bc6
+    type: PRESET_ACTION
+    command:
+      id: bfca72f7-dc65-4663-8241-e4e57a476be7
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: create button to submit the form
+  - id: bf9bd3d5-8df1-4b2e-a8fc-bd205ce3e67a
+    type: PRESET_ACTION
+    command:
+      id: 3ec65409-ad2e-481d-bfd2-92b4d8a2a2db
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: "View button in the Vlada's project 1 level "
+  - id: 950f673c-e33f-4a18-8a19-8da56538f425
+    type: PRESET_ACTION
+    command:
+      id: 7a246bc5-9ad2-4be1-ac42-a292e943bcdc
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: new task button on the right hand side
