@@ -1,6 +1,6 @@
 fileType: momentic/test
 id: ddfdebee-5d03-4f2b-a990-d0b591429ce1
-name: scopiologin
+name: createProjectAndTask
 baseUrl: https://ssmp.scopicsoftware.dev/
 description: create a new project and add a task to it
 schemaVersion: 1.0.22
