@@ -39,3 +39,9 @@ steps:
       target:
         type: description
         elementDescriptor: login button on the main form
+  - id: 81a84c55-a2f7-40b6-bc13-ef2e0437473a
+    type: PRESET_ACTION
+    command:
+      id: 8a39685c-fdb2-4f70-a51d-46344714d08b
+      type: AI_ASSERTION
+      assertion: Hamburger menu in topleft corner is visible

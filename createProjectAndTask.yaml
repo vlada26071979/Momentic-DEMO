@@ -2,7 +2,7 @@ fileType: momentic/test
 id: ddfdebee-5d03-4f2b-a990-d0b591429ce1
 name: scopiologin
 baseUrl: https://ssmp.scopicsoftware.dev/
-description: logging in to Scopio
+description: create a new project and add a task to it
 schemaVersion: 1.0.22
 advanced:
   viewport:
@@ -115,3 +115,55 @@ steps:
       target:
         type: description
         elementDescriptor: new task button on the right hand side
+  - id: 2005579f-5869-4712-90dd-440b04b10e9d
+    type: PRESET_ACTION
+    command:
+      id: 8bd4b3e2-e4a6-4a2f-9681-4b75fca1af58
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: Title field in the dialog box
+      value: Create automation script
+  - id: b31a00f8-2820-4a7b-9957-e39bfa083f77
+    type: PRESET_ACTION
+    command:
+      id: ce660051-d745-4d5e-b398-1939167d4c14
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: description field in the dialog box
+      value: my test script
+  - id: 3075222a-e490-4a8c-b840-d602fd1c96ae
+    type: PRESET_ACTION
+    command:
+      id: 0d5787d0-0721-4c80-aa0f-c936fe25ae00
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: test checkbox in the dialog box
+  - id: c378eabc-5cf1-4928-b0c2-6634e774a3d0
+    type: PRESET_ACTION
+    command:
+      id: 1e983dc4-409f-45d2-8b4f-c290f039f6bf
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: Create Task in the bottom right of the dialog box
+  - id: 5af8f806-df1f-44f7-913e-e8e68aa66bad
+    type: PRESET_ACTION
+    command:
+      id: be992700-dee7-47da-8451-7a3cbb7f0532
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: three dots alongside the "View" button
+  - id: e6ac1a95-52e6-4089-9068-e58105285d82
+    type: PRESET_ACTION
+    command:
+      id: a30cb304-6abf-4090-ac08-6de0905add19
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: delete text that appears next to "View" button
