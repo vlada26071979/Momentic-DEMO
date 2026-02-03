@@ -1,0 +1,47 @@
+fileType: momentic/test
+id: 31cdc5df-fdda-48dd-a86a-d3a79ee06d31
+name: login-with-wrong-pass
+baseUrl: https://ssmp.scopicsoftware.dev/auth
+description: Verify that user can't login with valid email and wrong password
+schemaVersion: 1.0.22
+advanced:
+  viewport:
+    width: 1920
+    height: 1080
+  browserType: Chromium
+retries: 1
+steps:
+  - id: 4875a401-fecf-492c-b6e9-2e243ec945ca
+    type: PRESET_ACTION
+    command:
+      id: c2fccc41-568d-473f-aed2-42c512a51668
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: email field
+      value: ssmp-admin@scopicsoftware.com
+  - id: 018ddd97-ac49-4aa6-8cbf-601bf1c4cd4a
+    type: PRESET_ACTION
+    command:
+      id: 584b375f-2bc3-4dc7-a068-7289dd251b38
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: password field
+      value: ded8efe7fedede7
+  - id: d07db3d2-e677-44e4-a9a7-338a4d55cb87
+    type: PRESET_ACTION
+    command:
+      id: 12d7b9b6-5e0e-4d37-b3e5-25cda57e2951
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: sign in button in the middle of the page
+  - id: 73ad9a64-50e1-4457-9a83-cc03e6c2a1ad
+    type: PRESET_ACTION
+    command:
+      id: b66b03ee-0abb-4b1d-8cc0-4723f51a2ccc
+      type: AI_ASSERTION
+      assertion: Error message is displayed indicating invalid credentials or login failed

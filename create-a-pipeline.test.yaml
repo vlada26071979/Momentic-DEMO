@@ -1,0 +1,117 @@
+fileType: momentic/test
+id: c48105d9-7e2f-4dd9-8903-b128d89b06a2
+name: create-a-pipeline
+baseUrl: https://ssmp.scopicsoftware.dev/auth
+description: this test verifies creation of a new pipeline
+schemaVersion: 1.0.22
+advanced:
+  viewport:
+    width: 1920
+    height: 1080
+  browserType: Chromium
+retries: 1
+steps:
+  - id: 5312211a-ad82-46e0-9ae0-d1c4ce8dcd84
+    type: PRESET_ACTION
+    command:
+      id: b9ea4c0b-51e0-47a9-b7c3-e87e2fed7997
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: email field
+      value: ssmp-admin@scopicsoftware.com
+  - id: b2964242-0c19-4058-95b6-fe091204c6fa
+    type: PRESET_ACTION
+    command:
+      id: 22728b4f-afe0-4586-89cf-baae46bfde5f
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: password field
+      value: W84pBaU8KKeNLP1m
+  - id: 0590ff85-4b0e-4874-b423-aabf1eeaabd9
+    type: PRESET_ACTION
+    command:
+      id: 7499a63e-68ee-4755-ad68-58ae193edf42
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: sign in button in the middle of the page
+  - id: 36a88013-fd5d-432d-b18e-102da1b59841
+    type: PRESET_ACTION
+    command:
+      id: ee1765af-f794-4eac-b767-4a6fcf4769e9
+      type: AI_ASSERTION
+      assertion: Welcome back text is displayed on the page
+  - id: 0629f262-b90e-4212-aee3-42d7281dbf6b
+    type: PRESET_ACTION
+    command:
+      id: fd0d5c2d-c826-4ec8-867c-e707c64dd68d
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: Pipelines text in the left side menu
+  - id: ff00a6ae-657d-40a7-a3c6-dda2a018a498
+    type: PRESET_ACTION
+    command:
+      id: 64e782e5-a043-43ff-a573-3c501ed22394
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: Add Pipeline in the top right corner
+  - id: 74a3074d-5d30-4896-8711-54e62e385db2
+    type: PRESET_ACTION
+    command:
+      id: a043e26d-bf7f-407b-a375-deace8df24a2
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: Pipeline Name field
+      value: "test pipeline "
+  - id: 9ee8a43c-46b1-4339-8d45-274a9466d7c2
+    type: PRESET_ACTION
+    command:
+      id: b60370ec-7d0f-4ed5-b7f8-46d75b21d18c
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: AWS Resource Name field
+      value: aws test
+  - id: a9eaf4bd-27c1-4aae-ae91-5df38c2425b3
+    type: PRESET_ACTION
+    command:
+      id: 3f7a483a-c5f5-4c7b-8fdb-8e8b1165c2da
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: AWS Role ARN field
+      value: test role
+  - id: d29ec9c4-a817-47f6-98d0-4cb6f97c846b
+    type: PRESET_ACTION
+    command:
+      id: e45df6f2-8e74-41de-92c2-c2193eff4ee8
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: Select a project dropdown in the dialog
+  - id: 98fb49e2-d2f1-4910-8275-6b4ffa3835f9
+    type: PRESET_ACTION
+    command:
+      id: 4263f828-b984-42ce-9328-dd34f1b30abd
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: Engineering portal in the project's dropdown
+  - id: 0302aa60-3875-4c5c-b92c-82f07eaae046
+    type: PRESET_ACTION
+    command:
+      id: f983658b-409a-46a1-a35f-982d81276860
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: Add button in the dialog

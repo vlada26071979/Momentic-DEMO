@@ -2,6 +2,6 @@
   "name": "my-momentic-repo",
   "scripts": {},
   "devDependencies": {
-    "momentic": "latest"
+    "momentic": "^2.38.1"
   }
 }

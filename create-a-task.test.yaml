@@ -1,0 +1,115 @@
+fileType: momentic/test
+id: b3377bde-14d8-47e6-b7d8-10611e582828
+name: create-a-task
+baseUrl: https://ssmp.scopicsoftware.dev/auth
+description: this test verifies that new task can be created
+schemaVersion: 1.0.22
+advanced:
+  viewport:
+    width: 1920
+    height: 1080
+  browserType: Chromium
+retries: 1
+steps:
+  - id: 868815dd-5ac9-4a09-b315-8a7ac1ae3623
+    type: PRESET_ACTION
+    command:
+      id: dd9e50c8-1040-43bf-8f7e-16e95a18adfa
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: email field
+      value: ssmp-admin@scopicsoftware.com
+  - id: a6d40176-92ce-4002-911d-1c63e02562fa
+    type: PRESET_ACTION
+    command:
+      id: 437bc0e6-32a5-4f9f-bdc0-4a9e146d8b59
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: password field
+      value: W84pBaU8KKeNLP1m
+  - id: 86733395-6034-4407-85f8-0aeabe8992a8
+    type: PRESET_ACTION
+    command:
+      id: a0f7b410-2bc8-4150-8795-c5cc9d2f59fa
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: sign in button in the middle of the page
+  - id: d9dffa5e-bc48-4644-9b33-7dac0522cf2a
+    type: PRESET_ACTION
+    command:
+      id: dc025766-9988-474f-8435-cb9b2b0378b7
+      type: AI_ASSERTION
+      assertion: Welcome back text is displayed on the page
+  - id: d45af351-1fee-41f7-b145-8c317d7d2743
+    type: PRESET_ACTION
+    command:
+      id: 0f1fcc3b-c0a5-467d-b793-e999fdba1e1d
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: Tasks text in left side bar menu
+  - id: c149b8c7-a35e-4b10-bd0b-9a7161d62fbc
+    type: PRESET_ACTION
+    command:
+      id: a00db4fe-65d9-431b-8767-5a57fb0367b0
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: New Task button in top right corner of the page
+  - id: 8d23486e-5843-40be-9d92-647271cfd433
+    type: PRESET_ACTION
+    command:
+      id: cee0c6d4-f2ca-411e-bda6-9b0f714a2f5f
+      clearContent: false
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: the title input in the Create New Task modal
+      value: test task vlada
+  - id: a6c5ad4a-cc58-44e7-8273-5c383dfe39e0
+    type: PRESET_ACTION
+    command:
+      id: 93691a6e-0923-4c44-8532-03ef94453f8f
+      clearContent: false
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: the description text area in the Create New Task modal
+      value: test vlada
+  - id: 1c4bfacf-3719-4c12-85bf-c3595d9d9f2a
+    type: PRESET_ACTION
+    command:
+      id: 1684fd6d-e1be-479a-ac40-dc8303262ca3
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: the project combobox in the Create New Task modal (select-project)
+  - id: 760afcac-ec66-46f4-b79b-286145597c96
+    type: PRESET_ACTION
+    command:
+      id: eb0cc1a6-dd81-4560-884a-5d1de292b992
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: the 'Engineering Portal' option in the project select listbox
+  - id: 7af116c0-67b8-4c40-8957-a610d317cf6a
+    type: PRESET_ACTION
+    command:
+      id: a947558c-4859-4ad0-ab76-b8426322ba44
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: the Create button in the Create New Task dialog
+  - id: caa94e2e-f1af-414c-8ba9-34699b5a8579
+    type: PRESET_ACTION
+    command:
+      id: 69dc8150-ab3d-4631-afb3-5a0c42524ad9
+      type: PAGE_CHECK
+      assertion:
+        type: CONTENT
+        value: test task vlada

@@ -1,0 +1,147 @@
+fileType: momentic/test
+id: 4005cb9d-f594-4092-a01f-c8232971cf2e
+name: create-a-project
+baseUrl: https://ssmp.scopicsoftware.dev/
+description: create a project and delete it
+schemaVersion: 1.0.22
+advanced:
+  viewport:
+    width: 1920
+    height: 1080
+  browserType: Chromium
+retries: 1
+steps:
+  - id: 5cdf77e7-247a-4844-9f53-02d43d790f60
+    type: PRESET_ACTION
+    command:
+      id: 5545bdeb-e618-4432-b3b8-9d13ea6c10db
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: email field
+      value: ssmp-admin@scopicsoftware.com
+  - id: c8a51626-61a7-4446-8626-32424bdaa252
+    type: PRESET_ACTION
+    command:
+      id: fa32e78f-d58f-4a38-9a07-45c63fcd0bca
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: password field
+      value: W84pBaU8KKeNLP1m
+  - id: 167925f8-1a34-4864-b6df-3f1eb6ba8778
+    type: PRESET_ACTION
+    command:
+      id: bb6c8259-adf2-4fc8-b1e4-66fbc71c631d
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: sign in button in the middle of the page
+  - id: 29796b30-b90c-4661-8cc4-66192c20ffc3
+    type: PRESET_ACTION
+    command:
+      id: 537bc14d-6794-4a47-9300-d91053f586d2
+      type: AI_ASSERTION
+      assertion: Welcome back text is displayed on the page
+  - id: 07f861bd-82a7-4ea8-964e-53638736f251
+    type: PRESET_ACTION
+    command:
+      id: 81c3802c-9923-46ad-bc48-194ffd093bcc
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: Projects link in top left
+  - id: b7fadf32-bdcc-4224-a36b-8097978720a3
+    type: PRESET_ACTION
+    command:
+      id: 7ee03049-88d0-4694-807a-096ee726076f
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: New Project button in top right
+  - id: 4d5b5d92-1b6b-4f8f-bf7a-752449243a41
+    type: PRESET_ACTION
+    command:
+      id: 429ddf18-19b5-44ed-908f-43c338e3bea2
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: Project name field in the dialog box
+      value: Vlada's project
+  - id: ce5802f0-4044-4470-a4ae-fc9fcd4483dd
+    type: PRESET_ACTION
+    command:
+      id: 9aec9c4a-0632-4639-864b-4fbf71f3a39d
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: Description field in the dialog box
+      value: my first project
+  - id: 1d3b21e1-d31a-4c64-a8f2-c3afed9779d9
+    type: PRESET_ACTION
+    command:
+      id: 6e454f8e-921c-4dce-92dc-316aeafec9dd
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: Select an organization dropdown in the new project dialog box
+  - id: 9f778002-44a2-4b25-9815-ccd8a5f48895
+    type: PRESET_ACTION
+    command:
+      id: 395c7e1c-0c8d-459f-a41a-ac24af5a963f
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: text that contains Scopic Inc.
+  - id: bdee02c8-f2f4-405f-9824-2519c457bd24
+    type: PRESET_ACTION
+    command:
+      id: e9714e23-95b5-4393-86b7-849637f391aa
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: Create button in bottom right of the dialog box
+  - id: d737a674-ba1d-470c-a89c-2d69dd4349df
+    type: PRESET_ACTION
+    command:
+      id: d6d276dd-f775-4745-adbc-29b84d8e2ac9
+      type: PAGE_CHECK
+      assertion:
+        type: CONTENT
+        value: Project created
+  - id: 212086d7-c259-4c2e-bd22-2cb3a9806379
+    type: PRESET_ACTION
+    command:
+      id: 0fbb702b-69d1-4da0-b470-e020c88e6f9f
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: three dots alongside View button in Vlada's project level
+  - id: 7f98a2e5-e5eb-4991-b5e2-3c8f0fb9f692
+    type: PRESET_ACTION
+    command:
+      id: 5b6dbded-f353-46a3-90f4-47018c6ab595
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: Settings text in the dropdown
+  - id: 8ee179fc-3d9f-48ad-86a1-2dbbf8e8705b
+    type: PRESET_ACTION
+    command:
+      id: 81317054-e886-4321-940b-d06b2aa8703d
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: Danger Zone tab
+  - id: b990a095-077f-4270-975c-a26e2a7aee7a
+    type: PRESET_ACTION
+    command:
+      id: 6151300b-072d-400c-88f9-a8bbb942f0bb
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: Delete Project button

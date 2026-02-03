@@ -1,0 +1,111 @@
+fileType: momentic/test
+id: 8622cec5-9412-43c6-a416-31c058e917aa
+name: verify-dashboard
+baseUrl: https://ssmp.scopicsoftware.dev/auth
+description: this test verifies that all elements are displayed on Dashboard page
+schemaVersion: 1.0.22
+advanced:
+  viewport:
+    width: 1920
+    height: 1080
+  browserType: Chromium
+retries: 1
+steps:
+  - id: c77f059b-26e4-48f5-9594-4810120e051a
+    type: PRESET_ACTION
+    command:
+      id: 4d8d72a5-6641-4403-8b94-ea2bc8caabf2
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: email field
+      value: ssmp-admin@scopicsoftware.com
+  - id: 51ddfbdd-00fb-4a17-8706-3c4486652bf6
+    type: PRESET_ACTION
+    command:
+      id: 34cb88a7-2ffb-4668-a2b1-2dee9c67f763
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: password field
+      value: W84pBaU8KKeNLP1m
+  - id: 12d48504-a26c-490d-a0ae-744ec5beca26
+    type: PRESET_ACTION
+    command:
+      id: d8a2f010-51c6-484c-a72d-a1a0ac38c002
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: sign in button in the middle of the page
+  - id: fc6fd326-614c-4f7f-b113-423cee6b5915
+    type: PRESET_ACTION
+    command:
+      id: aa24a8f2-2a72-4565-9299-4c571d027c31
+      type: AI_ASSERTION
+      assertion: Welcome back text is displayed on the page
+  - id: bf7b8b77-0afc-4776-9b2f-dc7b2d7954d5
+    type: PRESET_ACTION
+    command:
+      id: 73c1f9bf-3d96-4008-945f-a059ca8e8c7f
+      type: PAGE_CHECK
+      assertion:
+        type: CONTENT
+        value: Dashboard
+  - id: cfb30242-0394-49b8-b80f-a4bab3b340a3
+    type: PRESET_ACTION
+    command:
+      id: abbe48fe-2af2-4ab9-a34a-d70c0dc60c84
+      type: PAGE_CHECK
+      assertion:
+        type: CONTENT
+        value: Active Tasks
+  - id: 2f3845f2-f2fd-4035-bbfa-5d722a66fbf6
+    type: PRESET_ACTION
+    command:
+      id: 9fc6204c-16fd-4b0d-8a9f-e3da42d80596
+      type: PAGE_CHECK
+      assertion:
+        type: CONTENT
+        value: Pending Tasks
+  - id: d96ce198-8891-4164-b2df-9f612874c1f8
+    type: PRESET_ACTION
+    command:
+      id: 3b4951f2-9002-417f-bee1-e9fa9164d437
+      type: PAGE_CHECK
+      assertion:
+        type: CONTENT
+        value: Success Rate
+  - id: 187f2b97-d911-4456-9de7-54236a04ef51
+    type: PRESET_ACTION
+    command:
+      id: 0604180b-8048-48a6-8725-9779bcde0b18
+      type: PAGE_CHECK
+      assertion:
+        type: CONTENT
+        value: Failed Jobs
+  - id: 52fd6551-c40e-4c6d-8836-8378366b03af
+    type: PRESET_ACTION
+    command:
+      id: a3d75538-df7d-46b1-9d80-3c8af45ca9e8
+      type: PAGE_CHECK
+      assertion:
+        type: CONTENT
+        value: Recent Tasks
+  - id: 8fb123c1-5c2d-4d9b-9d0e-453c9ecc62bf
+    type: PRESET_ACTION
+    command:
+      id: 7c1ae131-3b0e-4d9e-a8b4-0b9b748625c8
+      type: PAGE_CHECK
+      assertion:
+        type: CONTENT
+        value: Recent Activity
+  - id: 03d10e3e-9a99-4198-9359-ac801b77efb2
+    type: PRESET_ACTION
+    command:
+      id: a83f2d52-06d9-40bc-92da-84287959cb06
+      type: PAGE_CHECK
+      assertion:
+        type: CONTENT
+        value: All

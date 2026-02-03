@@ -2,3 +2,9 @@ name: app
 include:
   - "**/*.test.yaml"
   - "**/*.module.yaml"
+ai:
+  agentConfig:
+    locator: v3
+    assertion: v3
+    visual-assertion: v3
+    text-extraction: v3

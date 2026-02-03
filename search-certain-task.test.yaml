@@ -1,0 +1,81 @@
+fileType: momentic/test
+id: 86725779-ab7c-47a5-b140-cbb81f533b09
+name: search-certain-task
+baseUrl: https://ssmp.scopicsoftware.dev/auth
+description: this test verifies that existing task can be found
+schemaVersion: 1.0.22
+advanced:
+  viewport:
+    width: 1920
+    height: 1080
+  browserType: Chromium
+retries: 1
+steps:
+  - id: 638c4f53-f68d-464f-b4c1-cd8740b0ff4e
+    type: PRESET_ACTION
+    command:
+      id: 43b07d18-d904-42fe-a3ed-2066f610155a
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: email field
+      value: ssmp-admin@scopicsoftware.com
+  - id: 508b2205-08cb-40ac-a7fa-fdc42bcd41f6
+    type: PRESET_ACTION
+    command:
+      id: 21c0e5ed-bff5-4e61-8353-a0769ec2641e
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: password field
+      value: W84pBaU8KKeNLP1m
+  - id: 568a8b1b-dba5-4623-b6a1-d74dec1f1e76
+    type: PRESET_ACTION
+    command:
+      id: 14a9ac5d-46d2-4f37-aa8f-0b733e377987
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: sign in button in the middle of the page
+  - id: 921cd443-a1ce-4453-958c-cec70bfa7406
+    type: PRESET_ACTION
+    command:
+      id: 559f5add-3025-45db-ab37-b32498fe8e58
+      type: AI_ASSERTION
+      assertion: Welcome back text is displayed on the page
+  - id: 1c55746f-7593-4a42-a2df-cd35f7da1f95
+    type: PRESET_ACTION
+    command:
+      id: d96013d9-3962-4d91-93f8-2ca53aa5ec84
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: Tasks text in left side bar menu
+  - id: 3edb8f5c-cb00-4557-85ce-513b08ca7392
+    type: PRESET_ACTION
+    command:
+      id: 34540ce8-0419-4904-a068-5c9c62b76a6d
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: Search tasks by title field
+      value: gender is not getting populated
+  - id: 9cc8462a-f463-4eb6-a6dc-5cf026a90a48
+    type: PRESET_ACTION
+    command:
+      id: 63027023-6ebc-4de9-87cb-eaaa876d66c2
+      type: PAGE_CHECK
+      assertion:
+        type: CONTENT
+        value: gender is not getting populated in the bulk endpoint
+  - id: dc47b1ed-9766-4ce1-9c7f-302049eda9dc
+    type: PRESET_ACTION
+    command:
+      id: 3d047232-7c1b-41a0-8082-d4015d06a2fd
+      type: PAGE_CHECK
+      assertion:
+        type: CONTENT
+        value: Showing 1-1 of 1

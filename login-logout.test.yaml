@@ -1,0 +1,67 @@
+fileType: momentic/test
+id: b54ee765-529b-4b25-870d-a06b0f3e3659
+name: login-logout
+baseUrl: https://ssmp.scopicsoftware.dev/auth
+description: this test verifies login and logout functionality
+schemaVersion: 1.0.22
+advanced:
+  viewport:
+    width: 1920
+    height: 1080
+  browserType: Chromium
+retries: 1
+steps:
+  - id: 947ef3cc-ed24-4e6b-babc-9a1fdef07cb5
+    type: PRESET_ACTION
+    command:
+      id: c9e49bf7-22bc-4fbe-9d03-6a1a8bdd5c3e
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: email field
+      value: ssmp-admin@scopicsoftware.com
+  - id: 887a729a-3814-4e42-a7c3-579d5b14eb1e
+    type: PRESET_ACTION
+    command:
+      id: c35614d2-69cd-4058-8ded-2e4277d79dd1
+      clearContent: true
+      type: TYPE
+      target:
+        type: description
+        elementDescriptor: password field
+      value: W84pBaU8KKeNLP1m
+  - id: 248e7824-4b16-43c2-bca8-33685655ca2b
+    type: PRESET_ACTION
+    command:
+      id: 8944a7f0-ac53-4051-a25c-7b03781f26ad
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: sign in button in the middle of the page
+  - id: 17c901ef-74b3-4fb2-a9bc-6457d5fd8773
+    type: PRESET_ACTION
+    command:
+      id: 9deb70c1-75de-447f-bff2-1f93a5b70e72
+      type: AI_ASSERTION
+      assertion: Welcome back text is displayed on the page
+  - id: 4f0667a2-6a62-4ba6-bc17-64195b091cda
+    type: PRESET_ACTION
+    command:
+      id: 33574561-d348-4c3b-87f4-1b518b195df9
+      type: CLICK
+      target:
+        type: description
+        elementDescriptor: Log Out button in the bottom left corner of the page
+  - id: e111db8d-94a7-4007-b3ef-4668edb37063
+    type: PRESET_ACTION
+    command:
+      id: 363953af-acaa-46a0-a972-d73d194dcb7a
+      type: ELEMENT_CHECK
+      target:
+        type: description
+        elementDescriptor: Sign In button on the login form
+      assertion:
+        type: ELEMENT_EXISTENCE
+        negated: false
+        condition: VISIBLE
